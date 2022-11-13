@@ -4,9 +4,17 @@
 #include <unistd.h>
 #include <sys/ioctl.h> 
 
-#define O "\x1B[37m"
-#define X "\x1B[31m"
-#define R "\x1B[0m"
+#define COLORTYPE 0
+
+#if COLORTYPE==0
+	#define O "\x1B[37m"
+	#define X "\x1B[31m"
+	#define R "\x1B[0m"
+#elif COLORTYPE==1
+	#define X "\x1b[48;2;255;255;255m\x1b[38;2;255;255;255m"
+	#define O "\x1b[48;2;20;20;20m\x1b[38;2;20;20;20m"
+	#define R "\x1B[0m"
+#endif
 
 void printBoard(void *void_board, int WIDTH, int HEIGHT)
 {

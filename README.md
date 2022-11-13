@@ -4,4 +4,7 @@
 	- on linux: make; ./a.out
 	- on windows (MinGW): gcc gameoflife.c
 # image:
-![ScreenShot](gameoflife.png)
+color0:
+![ScreenShot](gameoflife_color0.png)
+color1:
+![ScreenShot](gameoflife_color1.png)
